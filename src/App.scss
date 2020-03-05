@@ -96,12 +96,11 @@ hr.paragraph {
   background: $military-olive;
   border-radius: 8px;
   box-shadow: -5px 5px $dark-olive;
-  overflow: hidden;
+  //overflow: hidden;
   display: table;
+  border: none;
   cursor: pointer;
   outline: none;
-  overflow: hidden;
-
 
 
   p {
@@ -113,19 +112,27 @@ hr.paragraph {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
+    border-radius: 8px ;
+
 
   }
 
-  :hover {
+  &:hover {
     background: $sunlight-olive;
-    color: $military-olive;
+    text-decoration: none;
+
+    p {
+      color: $military-olive;
+    }
   }
 
-  :active {
-    //box-shadow: none;
-    transform: translateY(3px) translateX(-3px) translateZ(3px);
+  &:active {
+    transform:  translateX(-3px) translateY(3px);
+    box-shadow: -2px 2px $ripe-olive, 5px -5px $sour-olive;
+    outline: none;
 
   }
+
 }
 
 .box-callout {
@@ -160,11 +167,17 @@ p.call-to-action {
 
 }
 
+
 .short-block {
-  display: table;
+  width: 100%;
+
   .content {
-    display: table-cell;
     horiz-align: center;
+
+    img {
+      display: block;
+      margin: auto;
+    }
   p {
 
     color: $military-olive;

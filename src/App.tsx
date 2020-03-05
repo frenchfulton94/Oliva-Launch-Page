@@ -111,7 +111,7 @@ const App = () => {
         </Col>
       </Row>
       <Row className={'my-5'}>
-        <Col>
+        <Col >
           <ShortBlock title={'SPEND.'} image={spend} />
         </Col>
         <Col>
@@ -127,7 +127,7 @@ const App = () => {
             Sign up to our newsletter and <br/>
             get a 6 month free trial when we launch!
           </p>
-          <Form>
+          <Form id={'sign-up'}>
             <Row className={'justify-content-center'}>
             <Col xs={12} md={5}>
             <Form.Group>

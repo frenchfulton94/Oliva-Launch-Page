@@ -3,9 +3,10 @@ import React from 'react';
 import {Image} from 'react-bootstrap';
 
 export const ShortBlock = (props:any) => {
-    const {title, image} = props;
+    const {title, image, className} = props;
+    const styleClass = className + ' short-block';
     return(
-        <div className={'short-block'}>
+        <div className={styleClass}>
             <div className={'content'}>
             <Image src={image} fluid />
             <p>{title}</p>
