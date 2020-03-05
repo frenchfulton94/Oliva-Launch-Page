@@ -16,10 +16,9 @@ import './App.scss';
 const App = () => {
   useEffect(() => {
     const script = document.createElement("script");
-
-    script.text = '!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/3f333cb353601a96af9e2b0ec/58e48b6f5347029a00f1b063a.js");';
+    script.type = 'text/javascript';
+    script.innerHTML = '!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/3f333cb353601a96af9e2b0ec/58e48b6f5347029a00f1b063a.js");';
     script.async = true;
-
 
     document.body.appendChild(script);
   });
