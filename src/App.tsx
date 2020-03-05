@@ -28,7 +28,7 @@ const App = () => {
   return (
     <Container className={'py-5'} fluid>
       <Row className={'top-row'}>
-        <Col>
+        <Col className={'mb-5'}>
           <Row>
             <Col className={'logo-col'}>
 
@@ -133,7 +133,7 @@ const App = () => {
           </p>
 
 
-              <form action="https://olivaapp.us19.list-manage.com/subscribe/post?u=3f333cb353601a96af9e2b0ec&amp;id=ada31955c9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
+              <form  action="https://olivaapp.us19.list-manage.com/subscribe/post?u=3f333cb353601a96af9e2b0ec&amp;id=ada31955c9" method="post" id={'sign-up'} name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
                 <Row className={'justify-content-center'}>
                   {/*<label htmlFor="mce-EMAIL">Subscribe</label>*/}
                   <Col xs={12} md={5}>
