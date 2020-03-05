@@ -7,11 +7,23 @@
 /*font-family: 'Barlow Condensed', sans-serif;*/
 /*font-family: 'Bebas Neue', cursive;*/
 
+
+@font-face {
+  font-family: 'bebasregular';
+  src: url('bebas-webfont.woff2') format('woff2'),
+  url('bebas-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 // Fonts
 $knewave: 'Knewave';
 $barlow: 'Barlow';
 $barlow-condensed: 'Barlow Condensed';
-$bebas-neue: 'Bebas Neue';
+$bebas-neue: 'bebasregular';
+
+
 
 
 // Colors
@@ -39,14 +51,14 @@ $box-shadow:  -5px 5px $military-olive;
   overflow: visible;
   p {
     font-size: 1.1rem;
-    color: $dark-olive;
-    font-family: Barlow;
+    color: $military-olive;
+    font-family: $barlow;
     font-weight: bold;
   }
 }
 
-h2 {
-  font-family:  Bebas;
+h1 {
+  font-family: $bebas-neue;
   color: $military-olive;
   font-weight: 900;
 
@@ -86,17 +98,33 @@ hr.paragraph {
   box-shadow: -5px 5px $dark-olive;
   overflow: hidden;
   display: table;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+
 
 
   p {
-    font-family: Bebas;
+    font-family: $bebas-neue;
     color: $sour-olive;
-    font-size: 5vmin;
+    font-size: 4vmin;
     height: 100%;
     width: 100%;
     display: table-cell;
     text-align: center;
     vertical-align: middle;
+
+  }
+
+  :hover {
+    background: $sunlight-olive;
+    color: $military-olive;
+  }
+
+  :active {
+    //box-shadow: none;
+    transform: translateY(3px) translateX(-3px) translateZ(3px);
+
   }
 }
 
@@ -110,20 +138,21 @@ hr.paragraph {
 
   .content {
     color: $military-olive;
-    font-family: Bebas;
+    font-family: $bebas-neue;
     height: 100%;
     width: 100%;
     display: table-cell;
     vertical-align: middle;
-    font-size: 3vmin;
+    font-size: 2vmin;
     text-align: center;
     display: flex;
+    letter-spacing: 3px;
   };
 
 }
 
 p.call-to-action {
-  font-family: Knewave;
+  font-family: $knewave;
   color: $dark-olive;
   font-size: 2rem;
   text-align: center;
@@ -132,11 +161,17 @@ p.call-to-action {
 }
 
 .short-block {
+  display: table;
+  .content {
+    display: table-cell;
+    horiz-align: center;
   p {
+
     color: $military-olive;
     font-size: 2rem;
-    font-family: Knewave;
+    font-family: $knewave;
     text-align: center;
+  }
   }
 }
 
@@ -186,6 +221,12 @@ p.call-to-action {
 @media only screen and (max-width: 768px) {
   .container-fluid {
     background-image: none;
+  }
+
+  .box-callout {
+    .content {
+      font-size: 3vmin;
+    }
   }
 }
 

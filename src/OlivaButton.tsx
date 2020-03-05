@@ -6,9 +6,9 @@ export const OlivaButton = (props: any) => {
     const styleClass = className + ' oliva-button';
     console.log(styleClass)
     return (
-        <div className={styleClass}>
+        <a className={styleClass}>
             <p>{title}</p>
-        </div>
+        </a>
     );
 };
 

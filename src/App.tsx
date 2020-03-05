@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {useEffect} from 'react';
 import {Container, Col, Row, Image, Form} from 'react-bootstrap';
 // @ts-ignore
 import { OlivaButton } from './OlivaButton';
@@ -13,15 +14,24 @@ import impact from './impact-olive.png';
 import './App.scss';
 
 const App = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+
+    script.text = '!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/3f333cb353601a96af9e2b0ec/58e48b6f5347029a00f1b063a.js");';
+    script.async = true;
+
+
+    document.body.appendChild(script);
+  });
   return (
-    <Container  fluid>
+    <Container className={'pb-5'} fluid>
       <link
           rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
           crossOrigin="anonymous"
       />
-      <link href="https://fonts.googleapis.com/css?family=Barlow|Barlow+Condensed:400,500|Bebas+Neue|Knewave&display=swap" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css?family=Barlow|Barlow+Condensed|Knewave&display=swap" rel="stylesheet"/>
       <Row className={'top-row'}>
         <Col>
           <Row >
@@ -33,9 +43,9 @@ const App = () => {
             <Col md={{span: 7, offset: 5}}>
               <Row className={'justify-content-center'}>
                 <Col md={8}>
-                  <h2>
+                  <h1>
                     <span>DIVERSIFY</span> YOUR INVESTMENTS
-                  </h2>
+                  </h1>
                   <hr className={'line-header'}/>
                   <h3>Invest your money to finance businesses owned by under-represented groups</h3>
                 </Col>
