@@ -47,7 +47,7 @@ $box-shadow:  -5px 5px $military-olive;
   background: url('./oliva-plant.svg');
   background-size: contain;
   background-repeat: no-repeat;
-  padding-top: 11%;
+
   overflow: visible;
   p {
     font-size: 1.1rem;
@@ -213,7 +213,7 @@ p.call-to-action {
 }
 
 .top-row {
-  height: calc(100vh - 15vh);
+  //max-height: calc(100vh - 15vh);
 
 }
 
@@ -222,13 +222,26 @@ p.call-to-action {
   position: absolute;
 }
 
-@media only screen and (min-width:2000px) {
+.logo-col {
+  height:18vh;
+  max-height: 200px;
+  .logo {
+    display: block;
+    padding-left: 5%;
+    margin: 3% 0;
+  }
+
+}
+
+@media only screen and (min-width:1200px) {
   .container-fluid {
-    padding-top: 200px;
     .top-row {
-      height: calc(100vh - 200px);
+      //max-height: calc(100vh - 200px);
     }
   }
+
+
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -241,6 +254,17 @@ p.call-to-action {
       font-size: 3vmin;
     }
   }
+
+  .logo-col {
+
+    .logo {
+      display: block;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+  }
+
 }
 
 .signup-row {
@@ -250,4 +274,5 @@ p.call-to-action {
 
   }
 }
+
 

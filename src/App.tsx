@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {useEffect} from 'react';
+import { useState } from 'react';
 import {Container, Col, Row, Image, Form} from 'react-bootstrap';
 // @ts-ignore
 import { OlivaButton } from './OlivaButton';
@@ -10,30 +10,31 @@ import facts from './facts-olive.svg';
 import spend from './shopping-olive.png';
 import earn from './earn-olive.png';
 import impact from './impact-olive.png';
+import logo from './logo.svg'
+import fullLogo from './logo-full.svg';
 
 import './App.scss';
 
 const App = () => {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.id ="mcjs";
-    script.type = 'text/javascript';
-    script.innerHTML = '!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/3f333cb353601a96af9e2b0ec/58e48b6f5347029a00f1b063a.js");';
-    script.async = true;
 
-    document.body.appendChild(script);
+  const initialImg = () => { return (window.innerWidth >= 768) ? logo : fullLogo };
+
+  const [logoImg, setLogoImg] = useState(initialImg());
+  window.addEventListener('resize', () => {
+    setLogoImg(initialImg())
   });
+
   return (
-    <Container className={'pb-5'} fluid>
-      <link
-          rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-          crossOrigin="anonymous"
-      />
-      <link href="https://fonts.googleapis.com/css?family=Barlow|Barlow+Condensed|Knewave&display=swap" rel="stylesheet"/>
+    <Container className={'py-5'} fluid>
       <Row className={'top-row'}>
         <Col>
+          <Row>
+            <Col className={'logo-col'}>
+
+                <Image className={'logo'} src={logoImg}  fluid />
+
+            </Col>
+          </Row>
           <Row >
             <Col md={{span: 7, offset: 5}}>
               <Image src={diversity} fluid/>
@@ -44,7 +45,7 @@ const App = () => {
               <Row className={'justify-content-center'}>
                 <Col md={8}>
                   <h1>
-                    <span>DIVERSIFY</span> YOUR INVESTMENTS
+                    <span>DIVERSIFY</span> YOUR <br/> INVESTMENTS
                   </h1>
                   <hr className={'line-header'}/>
                   <h3>Invest your money to finance businesses owned by under-represented groups</h3>
