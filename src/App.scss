@@ -1,0 +1,199 @@
+.App {
+  text-align: center;
+}
+
+/*font-family: 'Knewave', cursive;*/
+/*font-family: 'Barlow', sans-serif;*/
+/*font-family: 'Barlow Condensed', sans-serif;*/
+/*font-family: 'Bebas Neue', cursive;*/
+
+// Fonts
+$knewave: 'Knewave';
+$barlow: 'Barlow';
+$barlow-condensed: 'Barlow Condensed';
+$bebas-neue: 'Bebas Neue';
+
+
+// Colors
+$dark-olive: #4C4E2C;
+$military-olive: #7C7644;
+$olive-green: #9CA65C;
+$rotten-olive: #B4B294;
+$sour-olive: #ECEEB4;
+$ripe-olive: #2C2B2B;
+$sunlight-olive: #FFF9E8;
+$box-shadow:  -5px 5px $military-olive;
+
+#root {
+  min-width: 375px;
+  background: $sour-olive;
+
+}
+
+.container-fluid {
+  max-width: 1140px;
+  background: url('./oliva-plant.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-top: 11%;
+  overflow: visible;
+  p {
+    font-size: 1.1rem;
+    color: $dark-olive;
+    font-family: Barlow;
+    font-weight: bold;
+  }
+}
+
+h2 {
+  font-family:  Bebas;
+  color: $military-olive;
+  font-weight: 900;
+
+  span {
+    color: $dark-olive;
+  }
+}
+
+h3 {
+  color: $military-olive;
+  font-family: $barlow-condensed;
+  font-weight: 500;
+  line-height: 38px;
+
+}
+
+hr.line-header {
+  height: 3px;
+  background: $military-olive;
+  width: 50%;
+  margin-left: 0;
+}
+
+hr.paragraph {
+  background: $sunlight-olive;
+  box-shadow: $box-shadow;
+  height: 10px;
+  width: 50%;
+  margin-left: 0;
+}
+
+.oliva-button {
+  height: 61px;
+  width: 182px;
+  background: $military-olive;
+  border-radius: 8px;
+  box-shadow: -5px 5px $dark-olive;
+  overflow: hidden;
+  display: table;
+
+
+  p {
+    font-family: Bebas;
+    color: $sour-olive;
+    font-size: 5vmin;
+    height: 100%;
+    width: 100%;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+}
+
+.box-callout {
+
+  background: $sunlight-olive;
+  border-radius: 8px;
+  box-shadow:  -5px 5px $military-olive;
+  display: table;
+  padding: 16px;
+
+  .content {
+    color: $military-olive;
+    font-family: Bebas;
+    height: 100%;
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 3vmin;
+    text-align: center;
+    display: flex;
+  };
+
+}
+
+p.call-to-action {
+  font-family: Knewave;
+  color: $dark-olive;
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+
+}
+
+.short-block {
+  p {
+    color: $military-olive;
+    font-size: 2rem;
+    font-family: Knewave;
+    text-align: center;
+  }
+}
+
+.button-row {
+  display: table;
+  height: 100%;
+}
+
+.button-column {
+  display: table-cell;
+  horiz-align: center;
+  vertical-align: bottom;
+}
+
+.paragraph-column {
+  display: table;
+  height: 100%;
+  .paragraph-center {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.form-control {
+  height: 100%;
+}
+
+.top-row {
+  height: calc(100vh - 15vh);
+
+}
+
+.background-img {
+  width: 100%;
+  position: absolute;
+}
+
+@media only screen and (min-width:2000px) {
+  .container-fluid {
+    padding-top: 200px;
+    .top-row {
+      height: calc(100vh - 200px);
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container-fluid {
+    background-image: none;
+  }
+}
+
+.signup-row {
+
+  .oliva-button {
+    margin: 0 auto;
+
+  }
+}
+
