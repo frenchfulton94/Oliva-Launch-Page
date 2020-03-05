@@ -12,7 +12,6 @@ import earn from './earn-olive.png';
 import impact from './impact-olive.png';
 import logo from './logo.svg'
 import fullLogo from './logo-full.svg';
-
 import './App.scss';
 
 const App = () => {
@@ -23,7 +22,9 @@ const App = () => {
   window.addEventListener('resize', () => {
     setLogoImg(initialImg())
   });
+  const [email, setEmail] = useState('');
 
+  // @ts-ignore
   return (
     <Container className={'py-5'} fluid>
       <Row className={'top-row'}>
@@ -124,24 +125,64 @@ const App = () => {
       </Row>
       <Row>
         <Col>
+
+
           <p className={'text-center'}>
             Sign up to our newsletter and <br/>
             get a 6 month free trial when we launch!
           </p>
-          <Form id={'sign-up'}>
-            <Row className={'justify-content-center'}>
-            <Col xs={12} md={5}>
-            <Form.Group>
-              <Form.Control className={'form-input'} type={'email'} placeholder={'Enter Email'} />
-            </Form.Group>
-            </Col>
-            <Col  xs={12} md={3}>
-              <div className={'signup-row'}>
-              <OlivaButton title={'SIGN UP'}/>
-              </div>
-            </Col>
-            </Row>
-          </Form>
+
+
+              <form action="https://olivaapp.us19.list-manage.com/subscribe/post?u=3f333cb353601a96af9e2b0ec&amp;id=ada31955c9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
+                <Row className={'justify-content-center'}>
+                  {/*<label htmlFor="mce-EMAIL">Subscribe</label>*/}
+                  <Col xs={12} md={5}>
+                  <input  onChange={
+                    (e) => {
+                    setEmail(e.target.value)
+                  }} type="email"
+                         value={email}
+                         name="EMAIL"
+                         className="form-control"
+                         placeholder="email address"
+                         required />
+                  </Col>
+                    <div style={{position: "absolute", left: -5000}} aria-hidden="true">
+                      <input type="text" name="b_3f333cb353601a96af9e2b0ec_ada31955c9" tabIndex={-1} value="" readOnly/>
+                    </div>
+                    <Col xs={12} md={3}>
+                      <div className={'signup-row'}>
+                      <input type="submit" value="Subscribe" name="subscribe"  className="oliva-button"/>
+                      </div>
+                      </Col>
+                </Row>
+              </form>
+
+
+
+          {/*<Form id={'sign-up'} action="https://olivaapp.us19.list-manage.com/subscribe/post?u=3f333cb353601a96af9e2b0ec&amp;id=ada31955c9" method="post"  name="mc-embedded-subscribe-form" className="validate" target="_blank" >*/}
+          {/*  <Row className={'justify-content-center'}>*/}
+          {/*  <Col xs={12} md={5}>*/}
+          {/*  <Form.Group>*/}
+          {/*    <Form.Control className={'form-input'} name="EMAIL" type={'email'} placeholder={'Enter Email'} />*/}
+          {/*  </Form.Group>*/}
+          {/*  </Col>*/}
+          {/*  <Col  xs={12} md={3}>*/}
+          {/*    <div className={'signup-row'}>*/}
+          {/*    <OlivaButton title={'SIGN UP'}/>*/}
+          {/*    </div>*/}
+          {/*  </Col>*/}
+          {/*  </Row>*/}
+          {/*  //@ts-ignore*/}
+          {/*  <div style="position: absolute; left: -5000px;" aria-hidden="true">*/}
+          {/*    //@ts-ignore*/}
+          {/*    <input type="text" name="b_3f333cb353601a96af9e2b0ec_ada31955c9"*/}
+          {/*        //@ts-ignore*/}
+          {/*           tabIndex="-1" value=""/>*/}
+          {/*    </div>*/}
+          {/*  <div className="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"*/}
+          {/*                                className="button" /></div>*/}
+          {/*</Form>*/}
 
         </Col>
       </Row>
