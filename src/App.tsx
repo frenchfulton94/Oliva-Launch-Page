@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState } from 'react';
-import {Container, Col, Row, Image, Form} from 'react-bootstrap';
+import {Container, Col, Row, Image } from 'react-bootstrap';
 // @ts-ignore
 import { OlivaButton } from './OlivaButton';
 import { ShortBlock } from './ShortBlock';
@@ -26,36 +26,36 @@ const App = () => {
 
   // @ts-ignore
   return (
-    <Container className={'py-5'} fluid>
+    <Container fluid>
       <Row className={'top-row'}>
-        <Col className={'mb-5'}>
-          <Row>
-            <Col className={'logo-col'}>
+        <Col >
+          <Row >
+            <Col xs={5} md={3}  className={'logo-col'}>
 
-                <Image className={'logo'} src={logoImg}  fluid />
+                <Image  className={'logo my-3 my-md-0'} src={logoImg}  fluid />
 
             </Col>
           </Row>
           <Row >
             <Col md={{span: 7, offset: 5}}>
-              <Image src={diversity} fluid/>
+              <Image className={'mb-0'} src={diversity} fluid/>
             </Col>
           </Row>
-          <Row className={'pt-3'}>
-            <Col md={{span: 7, offset: 5}}>
+          <Row>
+            <Col md={{span: 6, offset: 6}}>
               <Row className={'justify-content-center'}>
-                <Col md={8}>
+                <Col className={'my-3'} xs={12}>
                   <h1>
                     <span>DIVERSIFY</span> YOUR <br/> INVESTMENTS
                   </h1>
                   <hr className={'line-header'}/>
-                  <h3>Invest your money to finance businesses owned by under-represented groups</h3>
+                  <h2>Invest your money to finance businesses owned by under-represented groups</h2>
                 </Col>
-                <Col md={4}>
+                <Col className={'my-5 mt-md-3 '} xs={12}>
                   <div className={'button-row'}>
                     <div className={'button-column'}>
                     {/*<OlivaButton title={'Learn More'}/>*/}
-                    <OlivaButton className={'mt-4'} title={'Sign Up'}/>
+                    <OlivaButton title={'Sign Up'}/>
                     </div>
                   </div>
                 </Col>
@@ -64,28 +64,32 @@ const App = () => {
           </Row>
         </Col>
       </Row>
-      <Row className={'pt-5'}>
-      <Col md={{span: 5, offset: 7}}>
+      <Row>
+      <Col md={{span: 6, offset: 6}}>
         <p>
           Small Businesses employ nearly half of all Americans, are interwoven in our communities, produce happier workers and contribute to generational wealth. Unfortunately, those who would benefit most from entrepreneurship (low income Americans and underrepresented minorities) face unique barriers  that are difficult to overcome.
-          <hr className={'paragraph'} />
         </p>
+        <hr className={'paragraph'} />
       </Col>
     </Row>
-      <Row className={'mt-5 justify-content-center my-5'} >
-        <Col md={4}>
-          <div className={'paragraph-column'}>
-          <p className={'paragraph-center'} >
+      <Row className={'justify-content-center mt-5'} >
+        <Col   md={{span: 5, offset: 0.5}}>
+          <Row className={'align-items-center height-adjust my-lg-5' }>
+            <Col>
+          <p >
             Underrepresented Americans have a harder time getting access to affordable capital in part due to shorter credit history’s and a lack of collateral.
-            <hr className={'paragraph'} />
           </p>
-          </div>
+              <hr className={'paragraph'} />
+
+            </Col>
+          </Row>
+
         </Col>
-        <Col className={'mt-3'} md={{span: 5, offset: 1}}>
-          <Image src={facts} fluid/>
+        <Col md={{span: 5, offset: -1}}>
+          <Image className={'my-5'} src={facts} fluid/>
         </Col>
       </Row>
-      <Row>
+      <Row className={'my-5'}>
         <Col>
           <div className={'box-callout'} >
             <p className={'content'}>
@@ -94,32 +98,35 @@ const App = () => {
           </div>
         </Col>
       </Row>
-      <Row>
+      <Row className={'my-5'}>
         <Col>
-          <p className={'text-center mt-5'}>Oliva invests your money as competitive financing to businesses owned by underrepresented groups.</p>
+          <p className={'text-center '}>Oliva invests your money as competitive financing to businesses owned by underrepresented groups.</p>
+          <hr className={'paragraph-center'}/>
         </Col>
       </Row>
-      <Row className={'my-5 justify-content-center'} >
-        <Col md={5} className={'mb-5'}>
+      <Row className={'justify-content-center'} >
+        <Col md={5} >
           <Image src={sale} fluid/>
         </Col>
-        <Col md={{span: 4, offset: 1}}>
-          <div className={'paragraph-column'} >
+        <Col md={5}>
+          <Row className={'align-items-center height-adjust' }>
+            <Col>
           <p className={'paragraph-center'}>
             Those businesses then not only provide an ROI but special/discounted products and services to you for your stake in their success.
-            <hr className={'paragraph'} />
           </p>
-          </div>
+            <hr className={'paragraph'} />
+            </Col>
+          </Row>
         </Col>
       </Row>
       <Row className={'my-5'}>
-        <Col >
+        <Col xs={12} md={4} >
           <ShortBlock title={'SPEND.'} image={spend} />
         </Col>
-        <Col>
+        <Col xs={12} md={4}>
           <ShortBlock title={'EARN.'} image={earn} />
         </Col>
-        <Col>
+        <Col xs={12} md={4}>
           <ShortBlock title={'IMPACT.'} image={impact} />
         </Col>
       </Row>
@@ -150,44 +157,17 @@ const App = () => {
                     <div style={{position: "absolute", left: -5000}} aria-hidden="true">
                       <input type="text" name="b_3f333cb353601a96af9e2b0ec_ada31955c9" tabIndex={-1} value="" readOnly/>
                     </div>
-                    <Col xs={12} md={3}>
+                    <Col className={'mt-3 mt-md-0'} xs={12} md={3}>
                       <div className={'signup-row'}>
                       <input type="submit" value="Subscribe" name="subscribe"  className="oliva-button"/>
                       </div>
                       </Col>
                 </Row>
               </form>
-
-
-
-          {/*<Form id={'sign-up'} action="https://olivaapp.us19.list-manage.com/subscribe/post?u=3f333cb353601a96af9e2b0ec&amp;id=ada31955c9" method="post"  name="mc-embedded-subscribe-form" className="validate" target="_blank" >*/}
-          {/*  <Row className={'justify-content-center'}>*/}
-          {/*  <Col xs={12} md={5}>*/}
-          {/*  <Form.Group>*/}
-          {/*    <Form.Control className={'form-input'} name="EMAIL" type={'email'} placeholder={'Enter Email'} />*/}
-          {/*  </Form.Group>*/}
-          {/*  </Col>*/}
-          {/*  <Col  xs={12} md={3}>*/}
-          {/*    <div className={'signup-row'}>*/}
-          {/*    <OlivaButton title={'SIGN UP'}/>*/}
-          {/*    </div>*/}
-          {/*  </Col>*/}
-          {/*  </Row>*/}
-          {/*  //@ts-ignore*/}
-          {/*  <div style="position: absolute; left: -5000px;" aria-hidden="true">*/}
-          {/*    //@ts-ignore*/}
-          {/*    <input type="text" name="b_3f333cb353601a96af9e2b0ec_ada31955c9"*/}
-          {/*        //@ts-ignore*/}
-          {/*           tabIndex="-1" value=""/>*/}
-          {/*    </div>*/}
-          {/*  <div className="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"*/}
-          {/*                                className="button" /></div>*/}
-          {/*</Form>*/}
-
         </Col>
       </Row>
-      <Row className={'mt-5'} >
-        <Col>
+      <Row className={'py-5'} >
+        <Col >
           <p className={'call-to-action'}>Join us in building an economic community, <br/>
             not just a portfolio</p>
         </Col>

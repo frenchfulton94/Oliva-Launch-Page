@@ -17,10 +17,40 @@
 
 }
 
+@font-face {
+  font-family: 'knewaveregular';
+  src: url('knewave-regular-webfont.woff2') format('woff2'),
+  url('knewave-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'barlowregular';
+  src: url('barlow-regular-webfont.woff2') format('woff2'),
+  url('barlow-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+@font-face {
+  font-family: 'barlow_condensedregular';
+  src: url('barlowcondensed-regular-webfont.woff2') format('woff2'),
+  url('barlowcondensed-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
 // Fonts
-$knewave: 'Knewave';
-$barlow: 'Barlow';
-$barlow-condensed: 'Barlow Condensed';
+$knewave: 'Knewave', 'knewaveregular';
+$barlow: 'Barlow', 'barlowregular';
+$barlow-condensed: 'Barlow Condensed', 'barlow_condensedregular';
 $bebas-neue: 'bebasregular';
 
 
@@ -53,7 +83,6 @@ $box-shadow:  -5px 5px $military-olive;
     font-size: 1.1rem;
     color: $military-olive;
     font-family: $barlow;
-    font-weight: bold;
   }
 }
 
@@ -61,14 +90,15 @@ h1 {
   font-family: $bebas-neue;
   color: $military-olive;
   font-weight: 900;
+  //font-size: 1;/
 
   span {
     color: $dark-olive;
   }
 }
 
-h3 {
-  color: $military-olive;
+h2 {
+  color: $olive-green;
   font-family: $barlow-condensed;
   font-weight: 500;
   line-height: 38px;
@@ -90,36 +120,44 @@ hr.paragraph {
   margin-left: 0;
 }
 
+hr.paragraph-center {
+ display: none;
+}
+
 .oliva-button {
+
   height: 61px;
   width: 182px;
   background: $military-olive;
   border-radius: 8px;
   box-shadow: -5px 5px $dark-olive;
+  //padding: 9px;
   //overflow: hidden;
-  display: table;
+  display: grid;
   border: none;
   cursor: pointer;
   outline: none;
-
+  font-family: $bebas-neue;
+  color: $sour-olive;
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
 
   p {
     font-family: $bebas-neue;
     color: $sour-olive;
-    font-size: 4vmin;
-    height: 100%;
-    width: 100%;
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
+    font-size: 2rem;
     border-radius: 8px ;
-
+    margin: auto;
 
   }
+
 
   &:hover {
     background: $sunlight-olive;
     text-decoration: none;
+    color: $military-olive;
+
 
     p {
       color: $military-olive;
@@ -142,7 +180,8 @@ hr.paragraph {
   box-shadow:  -5px 5px $military-olive;
   display: table;
   padding: 16px;
-
+  width: calc(100% - 5px);
+  margin-left: 5px;
   .content {
     color: $military-olive;
     font-family: $bebas-neue;
@@ -150,10 +189,11 @@ hr.paragraph {
     width: 100%;
     display: table-cell;
     vertical-align: middle;
-    font-size: 2vmin;
+    font-size: 3vmin;
     text-align: center;
     display: flex;
     letter-spacing: 3px;
+    margin: 0;
   };
 
 }
@@ -213,7 +253,7 @@ p.call-to-action {
 }
 
 .top-row {
-  //max-height: calc(100vh - 15vh);
+  //height: 100vh;
 
 }
 
@@ -223,14 +263,18 @@ p.call-to-action {
 }
 
 .logo-col {
-  height:18vh;
-  max-height: 200px;
+  //height:18vh;
+  //max-height: 200px;
   .logo {
-    display: block;
-    padding-left: 5%;
-    margin: 3% 0;
+    //display: block;
+    //height: 200px;
+
   }
 
+}
+
+.height-adjust {
+  height: 100%
 }
 
 @media only screen and (min-width:1200px) {
@@ -244,7 +288,7 @@ p.call-to-action {
 
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .container-fluid {
     background-image: none;
   }
@@ -254,14 +298,21 @@ p.call-to-action {
       font-size: 3vmin;
     }
   }
+.logo-col {
+  display: block;
+  margin: 0 auto ;
+  .logo {
+    display: block;
+    margin: 0 auto ;
+  }
+}
 
-  .logo-col {
-
-    .logo {
-      display: block;
-      margin: 0 auto;
-      padding: 0;
-    }
+  hr.paragraph-center {
+    background: $sunlight-olive;
+    box-shadow: $box-shadow;
+    height: 10px;
+    width: 50%;
+    display: block;
 
   }
 
