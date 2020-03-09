@@ -77,9 +77,8 @@ $box-shadow:  -5px 5px $military-olive;
   background: url('./oliva-plant.svg');
   background-size: contain;
   background-repeat: no-repeat;
-
   overflow: visible;
-  p {
+  p, li {
     font-size: 1.1rem;
     color: $military-olive;
     font-family: $barlow;
@@ -102,9 +101,17 @@ h2 {
   font-family: $barlow-condensed;
   font-weight: 500;
   line-height: 38px;
-
+  text-transform: uppercase;
+  font-weight: 700;
+  span {
+    font-size: 1.5rem;
+  }
 }
 
+h3 {
+  font-family: $bebas-neue;
+  color: $military-olive;
+}
 hr.line-header {
   height: 3px;
   background: $military-olive;
@@ -170,8 +177,8 @@ hr.paragraph-center {
     outline: none;
 
   }
-
 }
+
 
 .box-callout {
 
@@ -207,6 +214,9 @@ p.call-to-action {
 
 }
 
+li {
+  margin-bottom: 0.5rem;
+}
 
 .short-block {
   width: 100%;
@@ -224,7 +234,7 @@ p.call-to-action {
     font-size: 2rem;
     font-family: $knewave;
     text-align: center;
-  }
+    }
   }
 }
 
@@ -277,16 +287,34 @@ p.call-to-action {
   height: 100%
 }
 
+.works-content {
+  position: absolute;
+  top: 0;
+}
+
 @media only screen and (min-width:1200px) {
   .container-fluid {
     .top-row {
       //max-height: calc(100vh - 200px);
     }
   }
-
-
-
 }
+
+@media only screen and (max-width: 991px) {
+  .works-content {
+    //top: -10%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .works-content {
+    position: static;
+  }
+  ol {
+    padding-left: 20px;
+  }
+}
+
 
 @media only screen and (max-width: 767px) {
   .container-fluid {
@@ -297,7 +325,12 @@ p.call-to-action {
     .content {
       font-size: 3vmin;
     }
+
+
   }
+
+
+
 .logo-col {
   display: block;
   margin: 0 auto ;

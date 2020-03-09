@@ -46,10 +46,10 @@ const App = () => {
               <Row className={'justify-content-center'}>
                 <Col className={'my-3'} xs={12}>
                   <h1>
-                    <span>DIVERSIFY</span> YOUR <br/> INVESTMENTS
+                    <span>BUILD</span> YOUR <br/> WEALTH
                   </h1>
                   <hr className={'line-header'}/>
-                  <h2>Invest your money to finance businesses owned by under-represented groups</h2>
+                  <h2>Alongside your local nyc community <br/> <span>(not at the expense of it)</span></h2>
                 </Col>
                 <Col className={'my-5 mt-md-3 '} xs={12}>
                   <div className={'button-row'}>
@@ -67,19 +67,25 @@ const App = () => {
       <Row>
       <Col md={{span: 6, offset: 6}}>
         <p>
-          Small Businesses employ nearly half of all Americans, are interwoven in our communities, produce happier workers and contribute to generational wealth. Unfortunately, those who would benefit most from entrepreneurship (low income Americans and underrepresented minorities) face unique barriers  that are difficult to overcome.
+          Oliva invests your money in businesses owned by underrepresented groups in NYC.
         </p>
         <hr className={'paragraph'} />
       </Col>
     </Row>
       <Row className={'justify-content-center mt-5'} >
-        <Col   md={{span: 5, offset: 0.5}}>
-          <Row className={'align-items-center height-adjust my-lg-5' }>
+        <Col   md={{span: 6, offset: 0.5}}>
+          <Row className={'align-items-center height-adjust ' }>
             <Col>
-          <p >
-            Underrepresented Americans have a harder time getting access to affordable capital in part due to shorter credit history’s and a lack of collateral.
-          </p>
+              <div className={'works-content'}>
+              <h3>How It Works</h3>
+              <ol>
+                <li>You select one of the investment levels we provide.</li>
+                <li>Your money is added to our investment pool.</li>
+                <li>That pool is invested in promising businesses owned by underrepresented New Yorkers.</li>
+                <li>The businesses grow and you earn a share of the profits.</li>
+              </ol>
               <hr className={'paragraph'} />
+              </div>
 
             </Col>
           </Row>
@@ -89,57 +95,21 @@ const App = () => {
           <Image className={'my-5'} src={facts} fluid/>
         </Col>
       </Row>
-      <Row className={'my-5'}>
+      <Row className={'mb-5'}>
         <Col>
           <div className={'box-callout'} >
             <p className={'content'}>
-              We are building a coalition of stakeholders who believe low-income and underrepresented minorities should have a greater share in American business life.
+              We are building an economic community to support underrepresented business owners and ordinary people who want a greater stake in local community wealth creation.
             </p>
           </div>
         </Col>
       </Row>
-      <Row className={'my-5'}>
-        <Col>
-          <p className={'text-center '}>Oliva invests your money as competitive financing to businesses owned by underrepresented groups.</p>
-          <hr className={'paragraph-center'}/>
-        </Col>
-      </Row>
-      <Row className={'justify-content-center'} >
-        <Col md={5} >
-          <Image src={sale} fluid/>
-        </Col>
-        <Col md={5}>
-          <Row className={'align-items-center height-adjust' }>
-            <Col>
-          <p className={'paragraph-center'}>
-            Those businesses then not only provide an ROI but special/discounted products and services to you for your stake in their success.
-          </p>
-            <hr className={'paragraph'} />
-            </Col>
-          </Row>
-        </Col>
-      </Row>
-      <Row className={'my-5'}>
-        <Col xs={12} md={4} >
-          <ShortBlock title={'SPEND.'} image={spend} />
-        </Col>
-        <Col xs={12} md={4}>
-          <ShortBlock title={'EARN.'} image={earn} />
-        </Col>
-        <Col xs={12} md={4}>
-          <ShortBlock title={'IMPACT.'} image={impact} />
-        </Col>
-      </Row>
       <Row>
         <Col>
-
-
           <p className={'text-center'}>
-            Sign up to our newsletter and <br/>
-            get a 6 month free trial when we launch!
+            Sign up for our newsletter<br/>
+            to learn more as we prepare to launch!
           </p>
-
-
               <form  action="https://olivaapp.us19.list-manage.com/subscribe/post?u=3f333cb353601a96af9e2b0ec&amp;id=ada31955c9" method="post" id={'sign-up'} name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
                 <Row className={'justify-content-center'}>
                   {/*<label htmlFor="mce-EMAIL">Subscribe</label>*/}
@@ -168,8 +138,7 @@ const App = () => {
       </Row>
       <Row className={'py-5'} >
         <Col >
-          <p className={'call-to-action'}>Join us in building an economic community, <br/>
-            not just a portfolio</p>
+          <p className={'call-to-action'}>Join us in building an economic community!</p>
         </Col>
       </Row>
     </Container>
